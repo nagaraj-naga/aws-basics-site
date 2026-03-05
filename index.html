@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Basics</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({ startOnLoad: true });</script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<header class="bg-white border-b">
+  <div class="max-w-5xl mx-auto px-6 py-6">
+    <h1 class="text-3xl font-bold">AWS Basics</h1>
+    <p class="text-gray-600 mt-1">Simple introduction to Amazon Web Services</p>
+  </div>
+</header>
+
+<main class="max-w-5xl mx-auto px-6 py-10 space-y-12">
+
+<section>
+  <h2 class="text-xl font-semibold mb-3">What is AWS?</h2>
+  <p class="text-gray-700 leading-relaxed">
+    Amazon Web Services (AWS) is a cloud computing platform that provides
+    infrastructure services such as compute, storage, networking, and
+    databases through the internet.
+  </p>
+</section>
+
+<section>
+  <h2 class="text-xl font-semibold mb-4">Core AWS Services</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="bg-white p-5 rounded-lg border">
+      <h3 class="font-semibold">EC2</h3>
+      <p class="text-sm text-gray-600 mt-1">Virtual servers for running applications.</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg border">
+      <h3 class="font-semibold">S3</h3>
+      <p class="text-sm text-gray-600 mt-1">Scalable object storage for files and backups.</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg border">
+      <h3 class="font-semibold">RDS</h3>
+      <p class="text-sm text-gray-600 mt-1">Managed relational databases.</p>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg border">
+      <h3 class="font-semibold">Lambda</h3>
+      <p class="text-sm text-gray-600 mt-1">Run code without managing servers.</p>
+    </div>
+
+  </div>
+</section>
+
+<section>
+<h2 class="text-xl font-semibold mb-4">Basic AWS Architecture</h2>
+<div class="bg-white border rounded-lg p-4">
+<div class="mermaid">
+graph LR
+User --> CloudFront
+CloudFront --> ALB
+ALB --> EC2
+EC2 --> RDS
+EC2 --> S3
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="text-xl font-semibold mb-4">Serverless Architecture</h2>
+<div class="bg-white border rounded-lg p-4">
+<div class="mermaid">
+graph TD
+User --> API_Gateway
+API_Gateway --> Lambda
+Lambda --> DynamoDB
+Lambda --> S3
+</div>
+</div>
+</section>
+
+<section>
+<h2 class="text-xl font-semibold mb-3">Benefits of AWS</h2>
+<ul class="list-disc ml-6 text-gray-700 space-y-1">
+<li>Scalable infrastructure</li>
+<li>Pay-as-you-go pricing</li>
+<li>High availability</li>
+<li>Global cloud network</li>
+</ul>
+</section>
+
+</main>
+
+<footer class="border-t bg-white mt-10">
+  <div class="max-w-5xl mx-auto px-6 py-6 text-sm text-gray-500">
+    AWS Basics Demo Site
+  </div>
+</footer>
+
+</body>
+</html>
